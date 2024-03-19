@@ -1,4 +1,4 @@
-# Remote Procedure Calls (RPC) Application
+# Remote Procedure Call (RPC) Application
 ---
 ## How RPC Works
 - **Step 1 :** Specify the protocol for client server communication.
@@ -30,12 +30,12 @@ $ sudo apt install libntirpc-dev
 $ sudo apt install gcc
 $ rpcgen -a -C calculate.x
 ```
-&emsp;● **calculate_client.c** —-> client program (editable file)
-&emsp;● **calculate_server.c** —> server program (editable file)
-&emsp;● **calculate_cln.c** —> client stub
-&emsp;● **calculate_svc.c** —> server stub
-&emsp;● **calculate_xdr.c** —> XDR (External Data Representation) filters
-&emsp;● **calculate.h** —> header file needed for any XDR filters
+&emsp;● **calculate_client.c** —-> client program (editable file)\
+&emsp;● **calculate_server.c** —> server program (editable file)\
+&emsp;● **calculate_cln.c** —> client stub\
+&emsp;● **calculate_svc.c** —> server stub\
+&emsp;● **calculate_xdr.c** —> XDR (External Data Representation) filters\
+&emsp;● **calculate.h** —> header file needed for any XDR filters\
 &emsp;● **Makefile.calculate** —> compile all the source files by using this file
 
 - **Step 2 :** Develop the client program
