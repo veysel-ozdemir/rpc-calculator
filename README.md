@@ -27,6 +27,7 @@ $ rpcinfo
 $ sudo apt-get install rpcbind
 $ sudo apt install libc-dev-bin
 $ sudo apt install libntirpc-dev
+$ sudo apt-get install libtirpc-dev
 $ sudo apt install gcc
 $ rpcgen -a -C calculate.x
 ```
@@ -76,5 +77,19 @@ float * add_1_svc(inputs *argp, struct svc_req *rqstp) {
 $ sudo apt install make
 $ make -f Makefile.calculate
 ```
-## Depiction
-![decpiction](assets/rpc-depiction.png)
+If you encounter with the error below,
+```bash
+fatal error: rpc/rpc.h: No such file or directory
+```
+just replace the following two lines of code inside the **Makefile.calculate** file:
+```
+# Compiler flags 
+
+CFLAGS += -g -I/usr/include/tirpc
+LDLIBS += -ltirpc
+```
+## Depictions
+### Diagram
+![](assets/depiction-diagram.png)
+### In-Action
+![](assets/depiction-in-action.png)
